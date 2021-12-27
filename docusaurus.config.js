@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'wyh', // 网站的标题
+  title: 'wuyuehui', // 网站的标题
   tagline: '', // 网站的标语
   url: 'https://wuyuehui.github.io', // URL for your website
   baseUrl: '/', // Base URL for your site
@@ -18,6 +18,7 @@ const config = {
   organizationName: 'wuyuehui', // 拥有此源码仓库的 GitHub 用户或组织
   projectName: 'wuyuehui.github.io', // GitHub 源码仓库的名称
   deploymentBranch: 'gh-pages',
+
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -25,14 +26,14 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.ts'),
-          // Please change this to your repo.
-          // editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          routeBasePath: '/',
+          editUrl: 'https://github.com/wuyuehui/wuyuehui.github.io/edit/main/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+          editUrl: 'https://github.com/wuyuehui/wuyuehui.github.io/edit/main/',
+          blogSidebarTitle: '我的日常',
+          postsPerPage: 5,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -45,10 +46,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "wyh",
+        title: "wuyuhui",
         logo: {
           alt: 'Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
@@ -58,11 +59,11 @@ const config = {
             position: 'right',
             label: '文档',
           },
-          // {
-          //   to: '/blog',
-          //   position: 'right',
-          //   label: '博客',
-          // },
+          {
+            to: '/blog',
+            position: 'right',
+            label: '日常',
+          },
           {
             href: 'https://github.com/wuyuehui',
             label: 'GitHub',
@@ -72,47 +73,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-          // {
-          //   title: 'Docs',
-          //   items: [
-          //     {
-          //       label: 'Tutorial',
-          //       to: '/docs/intro',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: 'Community',
-          //   items: [
-          //     {
-          //       label: 'Stack Overflow',
-          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          //     },
-          //     {
-          //       label: 'Discord',
-          //       href: 'https://discordapp.com/invite/docusaurus',
-          //     },
-          //     {
-          //       label: 'Twitter',
-          //       href: 'https://twitter.com/docusaurus',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: 'More',
-          //   items: [
-          //     {
-          //       label: 'Blog',
-          //       to: '/blog',
-          //     },
-          //     {
-          //       label: 'GitHub',
-          //       href: 'https://github.com/facebook/docusaurus',
-          //     },
-          //   ],
-          // },
-        ],
+        links: [],
         copyright: `Copyright © ${new Date().getFullYear()} wyh, Inc. Built with Docusaurus.`,
       },
       prism: {
