@@ -1,0 +1,23 @@
+{
+    "version": "0.2",
+    "ignorePaths": [
+        ".docusaurus",
+        "build",
+        "blog",
+        "docs",
+        "node_modules",
+        "static",
+        ".gitignore",
+        "docusaurus.config.js",
+        "package-lock.json",
+        "package.json",
+        "README.md"
+    ],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [],
+    "ignoreWords": [
+        "clsx"
+    ],
+    "import": []
+}
