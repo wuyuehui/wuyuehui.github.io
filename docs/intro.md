@@ -17,4 +17,4 @@ slug: /
 
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=wuyuehui)](https://github.com/anuraghazra/github-readme-stats)
 
-![](https://visitor-badge.glitch.me/badge?page_id=jadezi.readme)
+![](https://visitor-badge.glitch.me/badge?page_id=wuyuehui.visitor-badge)
