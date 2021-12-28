@@ -35,6 +35,11 @@ const sidebars = {
           type: 'category',
           label: 'Promise',
           collapsed: true,
+          link: {
+            type: 'generated-index',
+            title: 'Promise',
+            description: "Promise学习文档记录",
+          },
           items: [
             'front-end/javaScript/promise/promise使用',
           ],

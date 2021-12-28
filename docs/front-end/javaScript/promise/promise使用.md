@@ -313,6 +313,7 @@ promise.then(res => {
   console.log(err)
 })
 ```
+
 ## Promise对象的finall方法
 
 finally是在ES9（ES2018）中新增的一个特性：表示无论Promise对象无论变成fulfilled还是reject状态，最终都会
@@ -335,6 +336,7 @@ promise.then(res => {
 })
 
 ```
+
 ## Promise类的resolve方法
 
 前面的then、catch、finally方法都属于Promise的实例方法，都是存放在Promise的prototype上的
@@ -390,7 +392,6 @@ promise.then(res => {
 })
 ```
 
-
 ## Promise类的reject方法
 
 ### 无论传入什么值都是一样的,直接reject这个值
@@ -418,14 +419,13 @@ promise.then(res => {
 })
 ```
 
-
 ## Promise类的all方法
 
-调用all方法，会在所有的Promise都变成fulfilled时, 再拿到结果，返回的是一个promise。
+调用all方法，会在所有的Promise都变成fulfilled时, 再拿到结果，返回的是一个Promise。
 
 返回的是一个数组，结果的顺序是按照传入的顺序返回的
 
-在拿到所有结果之前, 如果有一个promise变成了rejected, 那么整个promise就是rejected
+在拿到所有结果之前, 如果有一个Promise变成了rejected, 那么整个Promise就是rejected
 
 ```js
 // 创建多个Promise
@@ -438,6 +438,7 @@ const p1 = new Promise((resolve, reject) => {
 const p2 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve(222)
+    // reject(222)
   }, 2000);
 })
 
@@ -452,6 +453,147 @@ Promise.all([p2, p1, p3, "aaa"]).then(res => {
   console.log(res) // [222, 111, 333, 'aaa']
 }).catch(err => {
   console.log("err:", err)
+})
+
+```
+
+## Promise类的allSettled方法
+
+ES11新增的方法,该方法会在所有的Promise都有结果(settled),无论是fulfilled，还是rejected时，才会有最终状态
+
+并且这个Promise的结果一定是fulfilled
+
+```js
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(111)
+  }, 1000);
+})
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject(222)
+  }, 2000);
+})
+
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(333)
+  }, 3000);
+})
+
+Promise.allSettled([p1, p2, p3]).then(res => {
+  console.log(res)
+  // [
+  //   {
+  //     "status": "fulfilled",
+  //     "value": 111
+  //   },
+  //   {
+  //     "status": "rejected",
+  //     "reason": 222
+  //   },
+  //   {
+  //     "status": "fulfilled",
+  //     "value": 333
+  //   }
+  // ]
+}).catch(err => {
+  console.log(err) // 不会到catch
+})
+
+```
+
+## Promise类的race方法
+
+谁先有结果，那么就使用谁的结果
+
+```js
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(111)
+  }, 3000);
+})
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject(222)
+  }, 1500);
+})
+
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(333)
+  }, 1000);
+})
+
+Promise.race([p1, p2, p3]).then(res => {
+  console.log("res:", res) // res: 333
+}).catch(err => {
+  console.log("err:", err)
+})
+
+```
+
+## Promise类的any方法
+
+ES12新增的方法,和race类似,至少等到一个fulfilled状态，才决定promise的状态
+
+如果所有的Promise都是reject的，那么也会等到所有的Promise都变成rejected状态
+
+如果所有的Promise都是reject的，那么会报一个AggregateError的错误
+
+```js
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(111)
+  }, 1000);
+})
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject(222)
+  }, 500);
+})
+
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(333)
+  }, 3000);
+})
+
+Promise.any([p1, p2, p3]).then(res => {
+  console.log("res:", res) // res: 111
+}).catch(err => {
+  console.log("err:", err.errors)
+})
+
+```
+
+```js
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject(111)
+  }, 1000);
+})
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject(222)
+  }, 500);
+})
+
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject(333)
+  }, 3000);
+})
+
+Promise.any([p1, p2, p3]).then(res => {
+  console.log("res:", res)
+}).catch(err => {
+  console.log("err:", err) // err: AggregateError: All promises were rejected
+  console.log("err:", err.errors) // err: [111, 222, 333]
 })
 
 ```
