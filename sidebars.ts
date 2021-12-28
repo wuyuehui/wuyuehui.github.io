@@ -42,6 +42,7 @@ const sidebars = {
           },
           items: [
             'front-end/javaScript/promise/promise使用',
+            'front-end/javaScript/promise/promise实现',
           ],
         },
       ],
