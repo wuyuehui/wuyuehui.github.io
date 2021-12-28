@@ -365,7 +365,7 @@ promise.then(res => {
 })
 ```
 
-- 传入一个Promise
+### 传入一个Promise
 
 ```js
 const promise = Promise.resolve(new Promise((resolve, reject) => {
@@ -376,7 +376,7 @@ promise.then(res => {
   console.log(res) // resolve message
 })
 ```
-- 传入thenable对象
+### 传入thenable对象
 
 ```js
 const promise = Promise.resolve({
@@ -393,3 +393,65 @@ promise.then(res => {
 
 ## Promise类的reject方法
 
+### 无论传入什么值都是一样的,直接reject这个值
+
+```js
+const promise = Promise.reject("rejected message")
+// 相当于
+// const promise = new Promsie((resolve, reject) => {
+//   reject("rejected message")
+// })
+promise.then(res => {
+  console.log("res:", res)
+}).catch(err => {
+  console.log("err:", err) // err: rejected message
+})
+```
+
+```js
+const promise = Promise.reject(new Promise(() => { }))
+
+promise.then(res => {
+  console.log("res:", res)
+}).catch(err => {
+  console.log("err:", err) // err: Promise {<pending>}
+})
+```
+
+
+## Promise类的all方法
+
+调用all方法，会在所有的Promise都变成fulfilled时, 再拿到结果，返回的是一个promise。
+
+返回的是一个数组，结果的顺序是按照传入的顺序返回的
+
+在拿到所有结果之前, 如果有一个promise变成了rejected, 那么整个promise就是rejected
+
+```js
+// 创建多个Promise
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(111)
+  }, 1000);
+})
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(222)
+  }, 2000);
+})
+
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(333)
+  }, 3000);
+})
+
+// 传入不是promise的值会调用romise.resolve方法，转换成promise
+Promise.all([p2, p1, p3, "aaa"]).then(res => {
+  console.log(res) // [222, 111, 333, 'aaa']
+}).catch(err => {
+  console.log("err:", err)
+})
+
+```
