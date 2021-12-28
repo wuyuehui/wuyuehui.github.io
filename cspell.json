@@ -3,6 +3,7 @@
     "ignorePaths": [
         ".docusaurus",
         ".github",
+        ".vscode",
         "build",
         "blog",
         "docs",

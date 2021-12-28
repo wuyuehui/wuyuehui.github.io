@@ -1,6 +1,7 @@
 {
     "extends": "@tsconfig/docusaurus/tsconfig.json",
-    "include": [
-        "src/"
-    ]
+    // 会检测src下的ts文件，如果没有ts文件，这个文件会报错，所以暂时注释，使用ts可以解开
+    // "include": [
+    //     "src/"
+    // ]
 }
