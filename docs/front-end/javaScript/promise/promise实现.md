@@ -7,7 +7,7 @@ slug: /front-end/javaSciprt/promise/promise实现
 
 ## 实现Promis之前
 
-为了更好的了解Promise,准备实现一个自己的Promise
+为了更好的了解Promise,准备实现一个自己的Promise[完整代码](https://github.com/wuyuehui/wuyuehui.github.io/blob/main/code/promise/MPromise.js)
 
 但是在实现Promise之前，需要了解一下[Promise/A+](https://promisesaplus.com/)([中文](https://promisesaplus.cn/))规范。
 
