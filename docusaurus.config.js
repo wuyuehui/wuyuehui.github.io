@@ -71,7 +71,17 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [],
+        links: [
+          {
+            title: '学习链接',
+            items: [
+              {
+                label: '代码随想录',
+                to: 'https://programmercarl.com/',
+              },
+            ],
+          }
+        ],
         copyright: `Copyright © ${new Date().getFullYear()} wyh, Inc. Built with Docusaurus.`,
       },
       prism: {

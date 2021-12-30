@@ -22,22 +22,40 @@ const sidebars = {
   docs: [
     'intro',
     {
-      type: 'category',
       label: 'JavaScript',
+      type: 'category',
       link: {
         type: 'generated-index',
         title: 'JavaScript',
-        description: "JavaScript学习文档记录",
       },
       collapsed: true,
       items: [
         {
-          type: 'category',
           label: 'Promise',
+          type: 'category',
           collapsed: true,
           items: [
             'front-end/javaScript/promise/promise使用',
             'front-end/javaScript/promise/promise实现',
+          ],
+        },
+      ],
+    },
+    {
+      label: '算法学习',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+        title: '算法学习',
+        description: "主要通过代码随想录的文档进行算法学习",
+      },
+      items: [
+        {
+          label: '数组',
+          type: 'category',
+          collapsed: true,
+          items: [
+            'algorithm/array/704-二分查找',
           ],
         },
       ],
