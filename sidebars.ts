@@ -39,6 +39,7 @@ const sidebars = {
             'front-end/javaScript/promise/promise实现',
           ],
         },
+        'front-end/javaScript/JS模块化/JS_module',
       ],
     },
     {
