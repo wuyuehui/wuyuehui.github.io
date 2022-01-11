@@ -79,6 +79,18 @@ const config = {
                 label: '代码随想录',
                 to: 'https://programmercarl.com/',
               },
+              {
+                label: '力扣加加',
+                to: 'https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/'
+              },
+              {
+                label: 'LeetCode题目解析',
+                to: 'https://www.yuque.com/cuggz/leetcode'
+              },
+              {
+                label: '大厂面试题每日一题',
+                to: ' https://q.shanyue.tech/',
+              }
             ],
           }
         ],
