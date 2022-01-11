@@ -5,6 +5,7 @@
         ".github",
         ".vscode",
         "build",
+        "code/leetcode",
         "blog",
         "docs",
         "node_modules",
@@ -19,7 +20,8 @@
     "dictionaries": [],
     "words": [],
     "ignoreWords": [
-        "clsx"
+        "clsx",
+        "leetcode"
     ],
     "import": []
 }
