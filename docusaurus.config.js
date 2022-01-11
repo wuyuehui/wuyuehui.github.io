@@ -89,7 +89,7 @@ const config = {
               },
               {
                 label: '大厂面试题每日一题',
-                to: ' https://q.shanyue.tech/',
+                to: 'https://q.shanyue.tech/',
               }
             ],
           }
