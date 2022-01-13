@@ -24,10 +24,6 @@ const sidebars = {
     {
       label: 'JavaScript',
       type: 'category',
-      link: {
-        type: 'generated-index',
-        title: 'JavaScript',
-      },
       collapsed: true,
       items: [
         {
@@ -40,6 +36,16 @@ const sidebars = {
           ],
         },
         'front-end/javaScript/JS模块化/JS_module',
+      ],
+    },
+    {
+      label: 'TypeScript',
+      type: 'category',
+      items: [
+        'front-end/typeScript/为什么使用TypeScript',
+        'front-end/typeScript/开始使用TypeScript',
+        'front-end/typeScript/Typescript的原始类型',
+        'front-end/typeScript/Typescript中其他常见类型',
       ],
     },
     {
