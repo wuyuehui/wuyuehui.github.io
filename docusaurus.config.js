@@ -31,7 +31,7 @@ const config = {
           showReadingTime: true,
           editUrl: 'https://github.com/wuyuehui/wuyuehui.github.io/edit/main/',
           blogSidebarTitle: '我的日常',
-          postsPerPage: 5,
+          postsPerPage: 10,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
