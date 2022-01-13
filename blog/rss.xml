@@ -4,9 +4,38 @@
         <title>wuyuehui Blog</title>
         <link>https://wuyuehui.github.io/blog</link>
         <description>wuyuehui Blog</description>
-        <lastBuildDate>Sun, 09 Jan 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 13 Jan 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[markdown用户代码片段]]></title>
+            <link>https://wuyuehui.github.io/blog/2022/01/13/</link>
+            <guid>/2022/01/13/</guid>
+            <pubDate>Thu, 13 Jan 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[在用 markdown 写 TS 文档的过程中，因为经常需要贴上代码片段，如果要设置代码块，每次都要打以下的代码块的片段。]]></description>
+            <content:encoded><![CDATA[<p>在用 <code>markdown</code> 写 <code>TS</code> 文档的过程中，因为经常需要贴上代码片段，如果要设置代码块，每次都要打以下的代码块的片段。</p><pre><code>```ts
+
+```
+</code></pre><p>然后把写的代码复制进去，但是每次都打这个块感觉很繁琐。</p><p>虽然我装了一个 <code>markdown</code> 插件，带有快捷键可以生成，但是我就是记不住呀，于是就想着和之前创建js代码片段一样，再编辑一个用户代码片段，如下：</p><pre><code class="language-json">{
+    &quot;markdown typescript code template&quot;: {
+        &quot;scope&quot;: &quot;markdown&quot;,
+        &quot;prefix&quot;: &quot;tscode&quot;,
+        &quot;body&quot;: [
+            &quot;```ts&quot;,
+            &quot;$1&quot;,
+            &quot;```&quot;,
+            &quot;$2&quot;
+        ],
+        &quot;description&quot;: &quot;markdown typescript code template&quot;
+    }
+}
+</code></pre><p>本来想着能用了，但是到 <code>markdown</code> 里，输入 <code>tscode</code> 发现，没有丝毫的提示，我想不明白为啥。</p><p>于是查了资料发现还需要在首选项中，进行如下设置：</p><pre><code class="language-json" metastring="title=&#x27;setting.json&#x27;" title="&#x27;setting.json&#x27;">{
+    &quot;[markdown]&quot;: {
+        &quot;editor.quickSuggestions&quot;: true,
+    },
+}
+</code></pre><p>真是坑爹呀，终于又可以愉快的继续写文档了。</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[山地自行车]]></title>
             <link>https://wuyuehui.github.io/blog/2022/01/09/index</link>
