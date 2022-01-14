@@ -53,28 +53,24 @@ tsc --init
 
 5. 配置 `tsconfig.json` 和 `package.json`
 
-[更多关于tsconfig.json的配置](https://aka.ms/tsconfig.json)
-
 ```json title='tsconfig.json'
 {
   // 可以通过 compilerOptions 来定制你的编译选项
   "compilerOptions": {
-    "target": "es2016", // 指定 ECMAScript 目标版本
+    "target": "es5", // 指定 ECMAScript 目标版本
     "module": "commonjs", // 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
     "moduleResolution": "node", // 选择模块解析策略
-    "lib": [
-      "es6",
-      "dom"
-    ], // 指定要包含在编译中的库文件
+    "lib": ["es6", "dom"], // 指定要包含在编译中的库文件
     "outDir": "./dist", // 指定输出目录
     "allowJs": true, // 允许编译 javascript 文件
     "checkJs": true, // 报告 javascript 文件中的错误
     "removeComments": true, // 删除编译后的所有的注释
     "importHelpers": true, // 从 tslib 导入辅助工具函数
     "strict": true, // 启用所有严格类型检查选项, 等于其它选项的总开关，开启该项等于开启所有的严格模式配置。
-    "noImplicitAny": true, // 在表达式和声明上有隐含的 any类型时报错
-    "noImplicitThis": true, // 当 this 表达式值为 any 类型的时候，生成一个错误
-    "alwaysStrict": true, // 以严格模式检查模块，并在每个文件里加入 'use strict'
+    // "alwaysStrict": true, // 以严格模式检查模块，并在每个文件里加入 'use strict'
+    // "strictNullChecks": true, // 启用严格的 null 检查
+    // "noImplicitAny": true, // 在表达式和声明上有隐含的 any类型时报错
+    // "noImplicitThis": true, // 当 this 表达式值为 any 类型的时候，生成一个错误
     "noUnusedLocals": true, // 有未使用的变量时，抛出错误
     "noUnusedParameters": true, // 有未使用的参数时，抛出错误
     "noImplicitReturns": true, // 并不是所有函数里的代码都有返回值时，抛出错误
@@ -92,6 +88,11 @@ tsc --init
   ]
 }
 ```
+
+strict 相关的编译选项，开启该项等于开启以下所有项。
+
+![strictRelated](../../../static/img/docs/typeScript/strictRelated.png)
+
 :::tip
 使用 globs：`**/*` 
 
@@ -161,3 +162,10 @@ npm run build
 
 ![hello-function-build](../../../static/img/docs/typeScript/hello-function-build.png)
 
+## 参考文档
+
+[深入浅出TypeScript](https://www.yuque.com/cuggz/ts/nkxqne)
+
+[深入理解 TypeScript](https://jkchao.github.io/typescript-book-chinese/project/compilationContext.html#%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9)
+
+[Strict_Type_Checking_Options](https://www.typescriptlang.org/tsconfig#Strict_Type_Checking_Options_6173)

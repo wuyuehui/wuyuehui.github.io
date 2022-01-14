@@ -13,3 +13,8 @@ id: 为什么使用TypeScript
 1. 规避大量低级错误，避免时间浪费，省时
 2. 减少多人协作项目的成本，大型项目友好，省力
 3. 良好代码提示，不用反复文件跳转或者翻文档，省心
+
+
+## 参考文档
+
+[深入浅出TypeScript](https://www.yuque.com/cuggz/ts/nkxqne)

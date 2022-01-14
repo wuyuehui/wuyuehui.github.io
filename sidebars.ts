@@ -44,8 +44,9 @@ const sidebars = {
       items: [
         'front-end/typeScript/为什么使用TypeScript',
         'front-end/typeScript/开始使用TypeScript',
-        'front-end/typeScript/Typescript的原始类型',
-        'front-end/typeScript/Typescript中其他常见类型',
+        'front-end/typeScript/原始数据类型',
+        'front-end/typeScript/其他常见类型',
+        'front-end/typeScript/类型推导',
       ],
     },
     {
