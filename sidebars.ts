@@ -24,12 +24,11 @@ const sidebars = {
     {
       label: 'JavaScript',
       type: 'category',
-      collapsed: true,
+      collapsed: false,
       items: [
         {
           label: 'Promise',
           type: 'category',
-          collapsed: true,
           items: [
             'front-end/javaScript/promise/promise使用',
             'front-end/javaScript/promise/promise实现',
@@ -41,6 +40,7 @@ const sidebars = {
     {
       label: 'TypeScript',
       type: 'category',
+      collapsed: false,
       items: [
         'front-end/typeScript/为什么使用TypeScript',
         'front-end/typeScript/开始使用TypeScript',
@@ -50,6 +50,8 @@ const sidebars = {
         'front-end/typeScript/类型推导',
         'front-end/typeScript/枚举类型',
         'front-end/typeScript/联合类型',
+        'front-end/typeScript/类型别名',
+        'front-end/typeScript/类',
       ],
     },
     {
