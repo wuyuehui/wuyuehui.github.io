@@ -166,6 +166,6 @@ npm run build
 
 [深入浅出TypeScript](https://www.yuque.com/cuggz/ts/nkxqne)
 
-[深入理解 TypeScript](https://jkchao.github.io/typescript-book-chinese/project/compilationContext.html#%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9)
+[深入理解 TypeScript](https://jkchao.github.io/typescript-book-chinese/project/compilationContext.html)
 
 [Strict_Type_Checking_Options](https://www.typescriptlang.org/tsconfig#Strict_Type_Checking_Options_6173)

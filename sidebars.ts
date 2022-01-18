@@ -46,7 +46,10 @@ const sidebars = {
         'front-end/typeScript/开始使用TypeScript',
         'front-end/typeScript/原始数据类型',
         'front-end/typeScript/其他常见类型',
+        'front-end/typeScript/模块与命名空间',
         'front-end/typeScript/类型推导',
+        'front-end/typeScript/枚举类型',
+        'front-end/typeScript/联合类型',
       ],
     },
     {
