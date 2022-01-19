@@ -52,6 +52,8 @@ const sidebars = {
         'front-end/typeScript/联合类型',
         'front-end/typeScript/类型别名',
         'front-end/typeScript/类',
+        'front-end/typeScript/接口',
+        'front-end/typeScript/类与接口',
       ],
     },
     {
