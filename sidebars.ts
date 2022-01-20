@@ -55,6 +55,7 @@ const sidebars = {
         'front-end/typeScript/接口',
         'front-end/typeScript/类与接口',
         'front-end/typeScript/泛型',
+        'front-end/typeScript/类型断言和类型守卫',
       ],
     },
     {
