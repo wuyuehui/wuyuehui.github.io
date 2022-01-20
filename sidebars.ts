@@ -49,7 +49,7 @@ const sidebars = {
         'front-end/typeScript/模块与命名空间',
         'front-end/typeScript/类型推导',
         'front-end/typeScript/枚举类型',
-        'front-end/typeScript/联合类型',
+        'front-end/typeScript/联合类型和交叉类型',
         'front-end/typeScript/类型别名',
         'front-end/typeScript/类',
         'front-end/typeScript/接口',
