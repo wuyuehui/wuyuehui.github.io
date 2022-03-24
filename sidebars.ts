@@ -24,7 +24,7 @@ const sidebars = {
     {
       label: 'JavaScript',
       type: 'category',
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           label: 'Promise',
@@ -40,7 +40,7 @@ const sidebars = {
     {
       label: 'TypeScript',
       type: 'category',
-      collapsed: false,
+      collapsed: true,
       items: [
         'front-end/typeScript/为什么使用TypeScript',
         'front-end/typeScript/开始使用TypeScript',
@@ -62,7 +62,7 @@ const sidebars = {
     {
       label: 'VSCode',
       type: 'category',
-      collapsed: false,
+      collapsed: true,
       items: [
         'front-end/vscode/VSCode插件推荐',
       ],

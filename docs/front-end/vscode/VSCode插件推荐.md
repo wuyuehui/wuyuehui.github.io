@@ -14,7 +14,7 @@ id: VSCode插件推荐
 
 ###  Atom One Dark Theme
 
-一个 `VSCode` 主题插件，个人比较喜欢偏暗色主题。
+`VSCode` 主题插件，个人比较喜欢偏暗色主题。
 
 [插件下载地址](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark)
 
@@ -23,7 +23,7 @@ id: VSCode插件推荐
 
 ###  VSCode Great Icons
 
-一个文件图标插件，主要用于区分各种文件显示，可以更好的找到不同的文件。
+文件图标插件，主要用于区分各种文件显示。
 
 [插件下载地址](https://marketplace.visualstudio.com/items?itemName=emmanuelbeziat.vscode-great-icons)
 
@@ -45,7 +45,7 @@ id: VSCode插件推荐
 
 ### Draw.io Integration
 
-一个画图软件，可以画各种图。
+可以画各种图。
 
 [插件下载地址](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
 
@@ -54,7 +54,7 @@ id: VSCode插件推荐
 
 ### Project Manager
 
-它可以帮助您轻松地访问您的项目。
+帮助您轻松地访问您的项目。
 
 [插件下载地址](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
 
@@ -63,7 +63,7 @@ id: VSCode插件推荐
 
 ### LeetCode
 
-让你可以 在 `VSCode` 刷 `leetcode` ，前提需要登录。
+在 `VSCode` 刷 `leetcode` 。
 
 [插件下载地址](https://marketplace.visualstudio.com/items?itemName=LeetCode.vscode-leetcode)
 
@@ -72,7 +72,7 @@ id: VSCode插件推荐
 下载完成后，请先看 [LeetCode README](https://github.com/LeetCode-OpenSource/vscode-leetcode/blob/master/docs/README_zh-CN.md) 进行使用
 
 :::tip
-最好配合一起使用 [Debug LeetCode](https://marketplace.visualstudio.com/items?itemName=wangtao0101.debug-leetcode)，帮助你可以在 vscode 进行调试
+最好配合一起使用 [Debug LeetCode](https://marketplace.visualstudio.com/items?itemName=wangtao0101.debug-leetcode)，帮助你可以在 VSCode 进行调试
 
 使用前请阅读 [Debug LeetCode README](https://github.com/wangtao0101/vscode-debug-leetcode/blob/master/docs/README_zh-CN.md)
 :::
@@ -80,7 +80,7 @@ id: VSCode插件推荐
 
 ### Time Master
 
-统计编码时间
+统计编码时间。
 
 [插件下载地址](https://marketplace.visualstudio.com/items?itemName=iceworks-team.iceworks-time-master)
 
@@ -88,6 +88,8 @@ id: VSCode插件推荐
 
 
 ## 工具类
+
+这类插件主要用于提高开发效率、规范编码格式等。
 
 ### GitLens — Git supercharged
 
@@ -98,7 +100,7 @@ id: VSCode插件推荐
 
 ### Prettier - Code formatter
 
-前端代码格式化工具
+前端代码格式化工具。
 
 [插件下载地址](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
@@ -109,7 +111,7 @@ id: VSCode插件推荐
 
 [插件下载地址](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
-首先安装此扩展，然后在当前项目根目录下添加 `.editorconfig` 文件，插件的作用是读取 `.editorconfig` 文件中定义的规则，并覆盖 `user/workspace settings` 中的对应配置（vscode本身是并不直接支持 `editorconfig` 的）
+首先安装此扩展，然后在当前项目根目录下添加 `.editorconfig` 文件，插件的作用是读取 `.editorconfig` 文件中定义的规则，并覆盖 `user/workspace settings` 中的对应配置（ `VSCode` 本身是并不直接支持 `editorconfig` 的）。
 
 示例：
 
@@ -162,12 +164,16 @@ indent_size = 2
 
 ### Image Preview
 
+图片预览。
+
 [插件下载地址](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview)
 
 ![Image Preview](../../../static/img/docs/vscode/Image-Preview.png)
 
 
 ### Live Preview
+
+在工作区，开启一个本地服务器预览你的网页。
 
 [插件下载地址](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
 
@@ -176,12 +182,16 @@ indent_size = 2
 
 ### Version lens
 
+显示了每个包的最新版本。
+
 [插件下载地址](https://marketplace.visualstudio.com/items?itemName=pflannery.vscode-versionlens)
 
 ![Version lens](../../../static/img/docs/vscode/Version-lens.gif)
 
 
 ### npm Dependency Links
+
+跳转到相应依赖的 `npm` 库地址。
 
 [插件下载地址](https://marketplace.visualstudio.com/items?itemName=herrmannplatz.npm-dependency-links)
 
@@ -190,6 +200,8 @@ indent_size = 2
 
 ### CSS Peek
 
+显示或者跳转到相关的 `css` 定义。
+
 [插件下载地址](https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek)
 
 ![CSS Peek](../../../static/img/docs/vscode/CSS-Peek.gif)
@@ -197,7 +209,7 @@ indent_size = 2
 
 ### Comment Translate
 
-适合阅读源码
+对注释进行翻译，适合用来阅读源码。
 
 [插件下载地址](https://marketplace.visualstudio.com/items?itemName=intellsmi.comment-translate) 
 
