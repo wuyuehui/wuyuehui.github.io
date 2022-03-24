@@ -60,6 +60,14 @@ const sidebars = {
       ],
     },
     {
+      label: 'VSCode',
+      type: 'category',
+      collapsed: false,
+      items: [
+        'front-end/vscode/VSCode插件推荐',
+      ],
+    },
+    {
       label: '算法学习',
       type: 'category',
       items: [
