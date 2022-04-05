@@ -79,6 +79,13 @@ const sidebars = {
         'algorithm/704.二分查找',
       ],
     },
+    {
+      label: '前端工程代码规范',
+      type: 'category',
+      items: [
+        'front-end/前端工程代码规范/TypeScript+ESLint+Prettier配合使用',
+      ],
+    },
   ],
 };
 
